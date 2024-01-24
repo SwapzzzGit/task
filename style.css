@@ -286,6 +286,9 @@
   }
 @media screen and (max-width:650px)
 {
+  .section-title {
+    margin: 0px 0px;
+  }
     #main div img{
         display: none;
     }
@@ -361,13 +364,17 @@
     }
 
     .project-card h3 {
-        font-size: 24px; 
+        font-size: 20px; 
     }
 
     .project-card p {
-        font-size: 16px; 
+        font-size: 12px; 
         width: 100%;
     }
+    .project-card a {
+      font-size: 12px; 
+      width: 100%;
+  }
 
     #project-cards {
         flex-direction: column;
@@ -377,10 +384,13 @@
         font-size: 20px;
         margin-bottom: 20px; 
     }
-
+    #contact{
+        margin: 250px 0px;
+    }
     .contact-form {
-        width: 80%; 
-        margin: 0 auto; 
+      height: 380px;
+      width: 100%; 
+      margin: 0 auto; 
     }
 
     .contact-form label {
