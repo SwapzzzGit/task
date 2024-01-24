@@ -286,6 +286,9 @@
   }
 @media screen and (max-width:650px)
 {
+  #main{
+    padding: 20px;
+  }
   .section-title {
     margin: 0px 0px;
   }
