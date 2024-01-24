@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #6E6E6E;
+    color: #fff;
+    padding: 0px 70px;
+    font-family: 'Arial'; 
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 70px;
+  }
+  
+  header img {
+    width: 100px;
+    height: auto;
+  }
+  
+  nav {
+    display: flex;
+  }
+  nav li{
+    margin-right: 70px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+  }
+  nav a:hover {
+    border-bottom: 2px solid #BAFF39;
+    text-decoration: none; 
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    background: #fff;
+    height: 5px;
+    width: 30px;
+    margin: 6px 0;
+}
+
+  body {
+    padding-top: 10vh;
+  }
+  
+  #about {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #left {
+    width: 50%;
+    
+}
+
+#left span {
+    color: #BAFF39;
+}
+
+  #left p {
+    width: 80%;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#left a {
+    background: #BAFF39;
+    color: #323131;
+    padding: 10px 18px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 30px 0px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+  
+#left h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+#right {
+    width: 50%;
+}
+  
+  #right img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  #projects {
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .section-title {
+    margin: 50px 0px;
+  }
+  
+  #project-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .project-card {
+    height: 450px;
+    width: 450px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 50px 0;
+    transition: box-shadow 0.3s ease; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: none;
+}
+
+.project-card:hover {
+    box-shadow: 0 0 15px rgba(186, 255, 57, 0.5); 
+}
+
+.project-card p{
+    width: 70%;
+}
+
+  #buttons{
+    background: #BAFF39;
+    color: #323131;
+    padding: 10px 18px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 30px 0px;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+
+  #contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #contact h2 {
+    margin: 50px 0px;
+  }
+  
+  .contact-form {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 20px;
+    width: 450px;
+    height: 450px;
+  }
+  
+.contact-form button{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+  .contact-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    background-color: #BAFF39;
+    color: #323131;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .contact-form button:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); 
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #6E6E6E;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 900; 
+}
+  @media screen and (max-width:1075px)
+  {
+    #main div img{
+        display: none;
+    }
+    .menu-icon {
+        display: flex; 
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #6E6E6E;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.show {
+        display: flex; 
+    }
+    nav ul.show + .overlay {
+        opacity: 0.8;
+        visibility: visible;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    nav a {
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .menu-icon span {
+        height: 2px;
+        width: 25px;
+    }
+      #left h1 {
+          font-size: 40px;
+          margin-bottom: 2px;
+        }    
+  }
+@media screen and (max-width:650px)
+{
+    #main div img{
+        display: none;
+    }
+    .menu-icon {
+        display: flex; 
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        display: none; 
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #6E6E6E;
+    }
+
+    nav ul.show {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    nav a {
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .menu-icon span {
+        height: 2px;
+        width: 25px;
+    }
+
+    body{
+        padding: 0px 0px;
+    }
+    #left h1 {
+        font-size: 20px;
+        margin-bottom: 26px;
+        text-align: center;
+    }   
+    #left p{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0px;
+      }
+     
+    #left,
+    #right {
+        width: 100%; 
+        order: initial;
+        align-items: center; 
+    } 
+    #right {
+        margin-top: -100px;
+    }
+
+    .project-card {
+        width: 100%; 
+        margin: 20px auto; 
+    }
+
+    .project-card h3 {
+        font-size: 24px; 
+    }
+
+    .project-card p {
+        font-size: 16px; 
+        width: 100%;
+    }
+
+    #project-cards {
+        flex-direction: column;
+    }
+
+    #contact h2 {
+        font-size: 20px;
+        margin-bottom: 20px; 
+    }
+
+    .contact-form {
+        width: 80%; 
+        margin: 0 auto; 
+    }
+
+    .contact-form label {
+        font-size: 16px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px; 
+    }
+
+    .contact-form button {
+        font-size: 16px;
+    }
+}

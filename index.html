@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <header id="main">
+        <div>
+            <img src="./portfolio-logo.png" sizes="" alt="portfolio-logo">
+        </div>
+        <nav>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <div id="left">
+            <h1>I'm <span>Swapnil</span> Mundaware</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam nemo eum quae sed similique architecto quo, dignissimos nisi vel facere quos perspiciatis et pariatur eius!</p>
+            <a href="https://drive.google.com/file/d/1QwnxuywUHPzJkBhrastVY7SMB_EvcXXv/view?usp=sharing" target="_blank">Download CV</a>
+        </div>
+        <div id="right">
+            <img src="./perfil.png" alt="photo-icon">
+        </div>
+    </section>
+
+    <section id="projects">
+        <h1 class="section-title">PROJECTS</h1>
+        <div id="project-cards">
+            <div class="project-card">
+                <h3>NetflixGPT</h3>
+                <p>NetflixGPT is an innovative project integrated with OPEN AI. using OPEN AI. Provide movie suggestion based on user Input. ensuring a diverse and immersive movie-watching experience for users.</p>
+                <a href="https://netflix-gpt-gamma.vercel.app" target="_blank" id="buttons">Watch Live</a>                          
+            </div>
+    
+            <div class="project-card">
+                <h3>User Management System</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum illo ut molestiae sint praesentium at dolor atque provident. Quaerat iure iste deleniti deserunt eum eos natus nostrum quo dolor cum.</p>
+                <a href="https://user-management-app-seven.vercel.app/" target="_blank" id="buttons">Watch Live</a>
+            </div>
+    
+            <div class="project-card">
+                <h3>React Music Player</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque numquam, id cumque eligendi magnam autem laudantium nostrum maiores doloremque? Voluptates quo eveniet saepe laudantium eum optio natus nulla culpa iusto?</p>
+                <a href="https://music-player-rho-two.vercel.app/" target="_blank" id="buttons">Watch Live</a> 
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+    
+            <label htmlFor="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+    
+            <label htmlFor="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>  
+    <script src="script.js"></script>
+</body>
+
+</html>
